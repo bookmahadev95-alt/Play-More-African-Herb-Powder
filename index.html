@@ -6,7 +6,9 @@
 <title>Play More African Herbs Powder</title>
 <style>
 body{font-family:Arial;margin:0;background:#f5f5f5}
-header{background:#1b5e20;color:#fff;padding:20px;text-align:center}
+header{background:url('play-more-2.jpeg') center/cover no-repeat;color:#fff;padding:60px 20px;text-align:center;position:relative}
+header::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);}
+header h1, header p, header .badge{position:relative;z-index:2}
 .container{padding:15px;max-width:500px;margin:auto}
 .box{background:#fff;padding:15px;margin-bottom:15px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
 h2{margin-top:0}
@@ -47,7 +49,20 @@ function orderNow(){
 <h1>🔥 Play More African Herbs Powder</h1>
 <p>Energy, Power & Vitality Booster</p>
 <span class="badge">LIMITED STOCK | COD AVAILABLE</span>
+<p id="countdown" style="font-size:18px;font-weight:bold;margin-top:10px;">⏰ Offer खत्म होने में: 10:00</p>
 </header>
+
+<script>
+// Countdown Timer
+var time = 600;
+setInterval(function(){
+  var minutes = Math.floor(time/60);
+  var seconds = time % 60;
+  seconds = seconds < 10 ? '0'+seconds : seconds;
+  document.getElementById('countdown').innerHTML = "⏰ Offer खत्म होने में: " + minutes + ":" + seconds;
+  if(time > 0){ time--; }
+},1000);
+</script>
 
 <div class="container">
 <div class="box">
@@ -57,7 +72,7 @@ function orderNow(){
 <div class="container">
 
 <div class="box">
-<img src="play-more.jpg" alt="herbal">
+<img src="play-more.jpeg" alt="herbal">
 <h2>💪 ताकत और एनर्जी बढ़ाएं</h2>
 <p>100% नेचुरल हर्बल सप्लीमेंट जो आपके शरीर को दे फुल पावर</p>
 </div>
@@ -73,7 +88,7 @@ function orderNow(){
 </div>
 
 <div class="box">
-<img src="play-more.jpeg" alt="result">
+<img src="play-more.jpg" alt="result">
 <h2>🎯 किसके लिए है?</h2>
 <p>✔️ थकान वाले लोग<br>✔️ कमजोरी महसूस करने वाले<br>✔️ स्टैमिना बढ़ाना चाहते हैं</p>
 </div>
@@ -83,6 +98,7 @@ function orderNow(){
 <p><del>₹1999</del> <b>₹999 (COD)</b></p>
 <p>🚚 फ्री डिलीवरी पूरे भारत में</p>
 <div class="trust">
+🔥 आज ही 50+ लोगों ने ऑर्डर किया<br>
 ✔️ 100% ओरिजिनल प्रोडक्ट<br>
 ✔️ No Side Effect (Herbal)<br>
 ✔️ 7 दिन में फर्क महसूस करें
