@@ -49,8 +49,21 @@ function orderNow(){
 <h1>🔥 Play More African Herbs Powder</h1>
 <p>Energy, Power & Vitality Booster</p>
 <span class="badge">LIMITED STOCK | COD AVAILABLE</span>
+<p style="margin-top:10px;font-size:18px;">🔥 4.8⭐ Rating (2,134+ Customers)</p>
 <p id="countdown" style="font-size:18px;font-weight:bold;margin-top:10px;">⏰ Offer खत्म होने में: 10:00</p>
+<button onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})" style="margin-top:10px;">👉 अभी ऑर्डर करें (COD)</button>
 </header>
+
+<script>
+var time = 600;
+setInterval(function(){
+  var minutes = Math.floor(time/60);
+  var seconds = time % 60;
+  seconds = seconds < 10 ? '0'+seconds : seconds;
+  document.getElementById('countdown').innerHTML = "⏰ Offer खत्म होने में: " + minutes + ":" + seconds;
+  if(time > 0){ time--; }
+},1000);
+</script>
 
 <script>
 // Countdown Timer
@@ -66,10 +79,24 @@ setInterval(function(){
 
 <div class="container">
 
+<div class="box">
+<h2>🔥 पहले और बाद का फर्क</h2>
+<p>❌ पहले: कमजोरी, थकान, लो एनर्जी<br>
+✅ बाद में: ताकत, स्टैमिना, फुल एनर्जी 💪</p>
+</div>
+
+<div class="box">
+<h2>🔒 भरोसे की गारंटी</h2>
+<p>✔️ 5000+ Happy Customers<br>
+✔️ All India Delivery 🇮🇳<br>
+✔️ 100% Herbal & Safe<br>
+✔️ No Side Effects</p>
+</div>
+
 <div class="container">
 
 <div class="box">
-<img src="play-more.jpeg" alt="herbal">
+<img src="play-more.jpg" alt="herbal">
 <h2>💪 ताकत और एनर्जी बढ़ाएं</h2>
 <p>100% नेचुरल हर्बल सप्लीमेंट जो आपके शरीर को दे फुल पावर</p>
 </div>
@@ -85,7 +112,7 @@ setInterval(function(){
 </div>
 
 <div class="box">
-<img src="play-more-3.jpeg" alt="result">
+<img src="play-more.jpg" alt="result">
 <h2>🎯 किसके लिए है?</h2>
 <p>✔️ थकान वाले लोग<br>✔️ कमजोरी महसूस करने वाले<br>✔️ स्टैमिना बढ़ाना चाहते हैं</p>
 </div>
