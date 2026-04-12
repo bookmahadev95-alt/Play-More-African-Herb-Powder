@@ -46,13 +46,14 @@ function orderNow(){
   var city=document.getElementById("city").value;
   var state=document.getElementById("state").value;
   var pincode=document.getElementById("pincode").value;
+  var quantity=document.getElementById("quantity").value;
 
-  if(name=="" || phone=="" || address=="" || city=="" || state=="" || pincode==""){
+  if(name=="" || phone=="" || address=="" || city=="" || state=="" || pincode=="" || quantity==""){
     alert("कृपया सभी जानकारी भरें");
     return;
   }
 
-  var msg = `नया COD ऑर्डर:\nनाम: ${name}\nमोबाइल: ${phone}\nपता: ${address}\nशहर: ${city}\nराज्य: ${state}\nपिनकोड: ${pincode}`;
+  var msg = `नया COD ऑर्डर:\nनाम: ${name}\nमोबाइल: ${phone}\nपता: ${address}\nशहर: ${city}\nराज्य: ${state}\nपिनकोड: ${pincode}\nQuantity: ${quantity}`;
 
   var url = "https://wa.me/916376662787?text=" + encodeURIComponent(msg);
   window.location.href = url;
@@ -168,7 +169,7 @@ setInterval(function(){
 </div>
 
 
-<img src="play-more.jpeg" alt="result">
+<img src="play-more-2.jpeg" alt="result">
 <h2>🎯 किसके लिए है?</h2>
 <p>✔️ थकान वाले लोग<br>✔️ कमजोरी महसूस करने वाले<br>✔️ स्टैमिना बढ़ाना चाहते हैं</p>
 </div>
@@ -193,6 +194,12 @@ setInterval(function(){
 <input type="text" id="city" placeholder="शहर (City)">
 <input type="text" id="state" placeholder="राज्य (State)">
 <input type="text" id="pincode" placeholder="पिन कोड">
+
+<select id="quantity">
+<option value="">Quantity चुनें</option>
+<option value="1 Pack">1 Pack - ₹999</option>
+<option value="2 Pack">2 Pack - ₹1799 (Best Offer)</option>
+</select>
 <select>
 <option selected>Cash on Delivery (COD)</option>
 </select>
