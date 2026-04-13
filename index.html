@@ -40,25 +40,22 @@ text-decoration:none;
 
 <script>
 function orderNow(){
-var name=document.getElementById("name").value;
-var phone=document.getElementById("phone").value;
-var address=document.getElementById("address").value;
-var city=document.getElementById("city").value;
-var state=document.getElementById("state").value;
-var pincode=document.getElementById("pincode").value;
-  var quantity=document.getElementById("quantity").value;
+  var name=document.getElementById("name").value;
+  var phone=document.getElementById("phone").value;
+  var address=document.getElementById("address").value;
+  var city=document.getElementById("city").value;
+  var state=document.getElementById("state").value;
+  var pincode=document.getElementById("pincode").value;
 
   if(name=="" || phone=="" || address=="" || city=="" || state=="" || pincode==""){
-  if(name=="" || phone=="" || address=="" || city=="" || state=="" || pincode=="" || quantity==""){
-alert("कृपया सभी जानकारी भरें");
-return;
-}
+    alert("कृपया सभी जानकारी भरें");
+    return;
+  }
 
   var msg = `नया COD ऑर्डर:\nनाम: ${name}\nमोबाइल: ${phone}\nपता: ${address}\nशहर: ${city}\nराज्य: ${state}\nपिनकोड: ${pincode}`;
-  var msg = `नया COD ऑर्डर:\nनाम: ${name}\nमोबाइल: ${phone}\nपता: ${address}\nशहर: ${city}\nराज्य: ${state}\nपिनकोड: ${pincode}\nQuantity: ${quantity}`;
 
-var url = "https://wa.me/916376662787?text=" + encodeURIComponent(msg);
-window.location.href = url;
+  var url = "https://wa.me/916376662787?text=" + encodeURIComponent(msg);
+  window.location.href = url;
 }
 </script>
 
@@ -79,19 +76,19 @@ window.location.href = url;
 // Dynamic stock
 var stock = 27;
 setInterval(function(){
-if(stock > 5){ stock--; }
-document.getElementById('stock').innerText = stock;
+  if(stock > 5){ stock--; }
+  document.getElementById('stock').innerText = stock;
 },8000);
 </script>
 
 <script>
 var time = 600;
 setInterval(function(){
-var minutes = Math.floor(time/60);
-var seconds = time % 60;
-seconds = seconds < 10 ? '0'+seconds : seconds;
-document.getElementById('countdown').innerHTML = "⏰ Offer खत्म होने में: " + minutes + ":" + seconds;
-if(time > 0){ time--; }
+  var minutes = Math.floor(time/60);
+  var seconds = time % 60;
+  seconds = seconds < 10 ? '0'+seconds : seconds;
+  document.getElementById('countdown').innerHTML = "⏰ Offer खत्म होने में: " + minutes + ":" + seconds;
+  if(time > 0){ time--; }
 },1000);
 </script>
 
@@ -99,11 +96,11 @@ if(time > 0){ time--; }
 // Countdown Timer
 var time = 600;
 setInterval(function(){
-var minutes = Math.floor(time/60);
-var seconds = time % 60;
-seconds = seconds < 10 ? '0'+seconds : seconds;
-document.getElementById('countdown').innerHTML = "⏰ Offer खत्म होने में: " + minutes + ":" + seconds;
-if(time > 0){ time--; }
+  var minutes = Math.floor(time/60);
+  var seconds = time % 60;
+  seconds = seconds < 10 ? '0'+seconds : seconds;
+  document.getElementById('countdown').innerHTML = "⏰ Offer खत्म होने में: " + minutes + ":" + seconds;
+  if(time > 0){ time--; }
 },1000);
 </script>
 
@@ -171,7 +168,6 @@ if(time > 0){ time--; }
 </div>
 
 
-<img src="play-more.jpeg" alt="result">
 <img src="play-more-2.jpeg" alt="result">
 <h2>🎯 किसके लिए है?</h2>
 <p>✔️ थकान वाले लोग<br>✔️ कमजोरी महसूस करने वाले<br>✔️ स्टैमिना बढ़ाना चाहते हैं</p>
@@ -197,12 +193,6 @@ if(time > 0){ time--; }
 <input type="text" id="city" placeholder="शहर (City)">
 <input type="text" id="state" placeholder="राज्य (State)">
 <input type="text" id="pincode" placeholder="पिन कोड">
-
-<select id="quantity">
-<option value="">Quantity चुनें</option>
-<option value="1 Pack">1 Pack - ₹999</option>
-<option value="2 Pack">2 Pack - ₹1799 (Best Offer)</option>
-</select>
 <select>
 <option selected>Cash on Delivery (COD)</option>
 </select>
