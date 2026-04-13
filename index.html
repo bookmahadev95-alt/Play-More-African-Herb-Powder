@@ -53,7 +53,8 @@ function orderNow(){
     return;
   }
 
-  var msg = `नया COD ऑर्डर:\nनाम: ${name}\nमोबाइल: ${phone}\nपता: ${address}\nशहर: ${city}\nराज्य: ${state}\nपिनकोड: ${pincode}\nQuantity: ${quantity}`;
+  var msg = `नया COD ऑर्डर:\nनाम: ${name}\nमोबाइल: ${phone}\nपता: ${address}\nशहर: ${city}\nराज्य: ${state}\nपिनकोड: ${pincode}
+Quantity: ${quantity}`;
 
   var url = "https://wa.me/916376662787?text=" + encodeURIComponent(msg);
   window.location.href = url;
@@ -115,6 +116,14 @@ setInterval(function(){
 <h2>🔥 7 दिन में फर्क महसूस करें</h2>
 <p>💪 ताकत और स्टैमिना बढ़ाएं<br>⚡ दिनभर एनर्जी पाएँ<br>💯 100% हर्बल सपोर्ट</p>
 <button onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">👉 अभी ऑर्डर करें</button>
+</div>
+
+<div class="box">
+<h2>👨 पुरुषों के लिए खास हर्बल सपोर्ट</h2>
+<p>✔️ कमजोरी और थकान कम करने में मदद<br>
+✔️ स्टैमिना और एनर्जी को सपोर्ट<br>
+✔️ बॉडी की प्राकृतिक ताकत को बढ़ावा<br>
+✔️ डेली लाइफ में एक्टिव महसूस करें</p>
 </div>
 
 <div class="box">
