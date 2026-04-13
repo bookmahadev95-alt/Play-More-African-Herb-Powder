@@ -40,24 +40,25 @@ text-decoration:none;
 
 <script>
 function orderNow(){
-  var name=document.getElementById("name").value;
-  var phone=document.getElementById("phone").value;
-  var address=document.getElementById("address").value;
-  var city=document.getElementById("city").value;
-  var state=document.getElementById("state").value;
-  var pincode=document.getElementById("pincode").value;
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var address=document.getElementById("address").value;
+var city=document.getElementById("city").value;
+var state=document.getElementById("state").value;
+var pincode=document.getElementById("pincode").value;
   var quantity=document.getElementById("quantity").value;
 
+  if(name=="" || phone=="" || address=="" || city=="" || state=="" || pincode==""){
   if(name=="" || phone=="" || address=="" || city=="" || state=="" || pincode=="" || quantity==""){
-    alert("कृपया सभी जानकारी भरें");
-    return;
-  }
+alert("कृपया सभी जानकारी भरें");
+return;
+}
 
-  var msg = `नया COD ऑर्डर:\nनाम: ${name}\nमोबाइल: ${phone}\nपता: ${address}\nशहर: ${city}\nराज्य: ${state}\nपिनकोड: ${pincode}
-Quantity: ${quantity}`;
+  var msg = `नया COD ऑर्डर:\nनाम: ${name}\nमोबाइल: ${phone}\nपता: ${address}\nशहर: ${city}\nराज्य: ${state}\nपिनकोड: ${pincode}`;
+  var msg = `नया COD ऑर्डर:\nनाम: ${name}\nमोबाइल: ${phone}\nपता: ${address}\nशहर: ${city}\nराज्य: ${state}\nपिनकोड: ${pincode}\nQuantity: ${quantity}`;
 
-  var url = "https://wa.me/916376662787?text=" + encodeURIComponent(msg);
-  window.location.href = url;
+var url = "https://wa.me/916376662787?text=" + encodeURIComponent(msg);
+window.location.href = url;
 }
 </script>
 
@@ -78,19 +79,19 @@ Quantity: ${quantity}`;
 // Dynamic stock
 var stock = 27;
 setInterval(function(){
-  if(stock > 5){ stock--; }
-  document.getElementById('stock').innerText = stock;
+if(stock > 5){ stock--; }
+document.getElementById('stock').innerText = stock;
 },8000);
 </script>
 
 <script>
 var time = 600;
 setInterval(function(){
-  var minutes = Math.floor(time/60);
-  var seconds = time % 60;
-  seconds = seconds < 10 ? '0'+seconds : seconds;
-  document.getElementById('countdown').innerHTML = "⏰ Offer खत्म होने में: " + minutes + ":" + seconds;
-  if(time > 0){ time--; }
+var minutes = Math.floor(time/60);
+var seconds = time % 60;
+seconds = seconds < 10 ? '0'+seconds : seconds;
+document.getElementById('countdown').innerHTML = "⏰ Offer खत्म होने में: " + minutes + ":" + seconds;
+if(time > 0){ time--; }
 },1000);
 </script>
 
@@ -98,11 +99,11 @@ setInterval(function(){
 // Countdown Timer
 var time = 600;
 setInterval(function(){
-  var minutes = Math.floor(time/60);
-  var seconds = time % 60;
-  seconds = seconds < 10 ? '0'+seconds : seconds;
-  document.getElementById('countdown').innerHTML = "⏰ Offer खत्म होने में: " + minutes + ":" + seconds;
-  if(time > 0){ time--; }
+var minutes = Math.floor(time/60);
+var seconds = time % 60;
+seconds = seconds < 10 ? '0'+seconds : seconds;
+document.getElementById('countdown').innerHTML = "⏰ Offer खत्म होने में: " + minutes + ":" + seconds;
+if(time > 0){ time--; }
 },1000);
 </script>
 
@@ -113,15 +114,14 @@ setInterval(function(){
 </div>
 
 <div class="box">
-<h2>🔥 रेगुलर यूज़ के साथ बेहतर महसूस करेंर स्टैमिना बएनर्जी सपोर्टिनभरएक्टिवनेसपाएँ<br>💯 100% हर्बल सपोर्ट</p>
+<h2>🔥 7 दिन में फर्क महसूस करें</h2>
+<p>💪 ताकत और स्टैमिना बढ़ाएं<br>⚡ दिनभर एनर्जी पाएँ<br>💯 100% हर्बल सपोर्ट</p>
 <button onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">👉 अभी ऑर्डर करें</button>
 </div>
 
 <div class="box">
-<h2>👨 पुरुषों के लिए खास हर्बल सडेली लाइफ के लिए हर्बल सपोर्टऔर एनर्जी कोथकान बॉडी की प्राकृतिक ताकत को बढ़ावएक्टिवनेसी लाइफ में एक्टिव महसूस करें</p>
-</dथकानdiv clएनर्जी सपोर्ट"box">
-<h2>🔒 </h2>
-<p>✔️ 4.8⭐ Rating (2000ers)<br>
+<h2>🔒 Trust & Safety</h2>
+<p>✔️ 4.8⭐ Rating (2000+ Customers)<br>
 ✔️ 5000+ Orders Delivered<br>
 ✔️ Cash on Delivery (COD)<br>
 ✔️ Free Delivery पूरे भारत में<br>
@@ -131,20 +131,21 @@ setInterval(function(){
 <div class="box">
 <h2>💸 आज का स्पेशल ऑफर</h2>
 <p><del>₹1999</del> <b style="font-size:22px;color:red;">₹999</b> (1 Pack)</p>
-<p><b style="font-size:20px;color:green;">�99 (Best Offer)</b></p>
+<p><b style="font-size:20px;color:green;">🔥 2 Pack = ₹1799 (Best Offer)</b></p>
 <p>⚠️ Limited Time Offer<br>🚚 Free Delivery<br>💵 Pay on Delivery (COD)</p>
 <button onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">🔥 अभी ऑर्डर करें</button>
 </div>
 
 <div class="box">
 <h2>🔥 पहले और बाद का फर्क</h2>
-<p>❌ पहले: थकान, थकान, लो एनर्जी<br>
-✅ बाद में: ताकत, स्टैमिना, फुल एनर्जी/p>
+<p>❌ पहले: कमजोरी, थकान, लो एनर्जी<br>
+✅ बाद में: ताकत, स्टैमिना, फुल एनर्जी 💪</p>
 </div>
 
 <div class="box">
-<h2े की गारंटी</थकान>✔️ 5000+ Happy Customers<br>
-✔️ एनर्जी सपोर्टInएक्टिवनेसvery 🇮🇳<br>
+<h2>🔒 भरोसे की गारंटी</h2>
+<p>✔️ 5000+ Happy Customers<br>
+✔️ All India Delivery 🇮🇳<br>
 ✔️ 100% Herbal & Safe<br>
 ✔️ No Side Effects</p>
 </div>
@@ -154,27 +155,32 @@ setInterval(function(){
 <div class="box" style="margin-top:-10px;">
 <img src="play-more.jpeg" alt="herbal">
 <h2>💪 ताकत और एनर्जी बढ़ाएं</h2>
-<p>100% नेचुर्बल सप्लीमेंट जो आपके शरीर को दे फुल पावर</p>
+<p>100% नेचुरल हर्बल सप्लीमेंट जो आपके शरीर को दे फुल पावर</p>
 </div>
 
 
 
 <div class="box">
-<h2>💪 क्एनर्जी सपोर्टायदा मिलेगा?</h2>
+<h2>💪 क्या फायदा मिलेगा?</h2>
 <ul>
 <li>⚡ दिनभर एनर्जी</li>
 <li>🔥 स्टैमिना बढ़ाए</li>
-<li>❤️ थकान दूर करे</li>
+<li>❤️ कमजोरी दूर करे</li>
 <li>💯 100% हर्बल</li>
 </ul>
-</div src="play-more-2.jpeg" alt="result">
-<h2>🎯 किसके एक्टिवनेस/h2>
-<p>✔️ थकान वालथकानbr>✔️ कमजोरी महसूस करने वाले<br>✔️ स्टैमिना बढ़ाना चाहते हैं</p>
+</div>
+
+
+<img src="play-more.jpeg" alt="result">
+<img src="play-more-2.jpeg" alt="result">
+<h2>🎯 किसके लिए है?</h2>
+<p>✔️ थकान वाले लोग<br>✔️ कमजोरी महसूस करने वाले<br>✔️ स्टैमिना बढ़ाना चाहते हैं</p>
 </div>
 
 <div class="box">
 <h2>💸 आज का ऑफर</h2>
-<p><de/del> <b>₹999 (COD)</b><थकान>🚚 फ्री डिलीवरी पूरे भएक्टिवनेस/p>
+<p><del>₹1999</del> <b>₹999 (COD)</b></p>
+<p>🚚 फ्री डिलीवरी पूरे भारत में</p>
 <div class="trust">
 🔥 आज ही 50+ लोगों ने ऑर्डर किया<br>
 ✔️ 100% ओरिजिनल प्रोडक्ट<br>
@@ -185,7 +191,8 @@ setInterval(function(){
 
 <div class="box" id="order">
 <h2>📝 COD ऑर्डर फॉर्म</h2>
-<input type="text" id="name" placeholder="पूरा रेगुलर यूज़ के साथ बेहतर महसूस करेंd="phone" placeholder="मोबाइल नंबर">
+<input type="text" id="name" placeholder="पूरा नाम">
+<input type="tel" id="phone" placeholder="मोबाइल नंबर">
 <textarea id="address" placeholder="पूरा पता"></textarea>
 <input type="text" id="city" placeholder="शहर (City)">
 <input type="text" id="state" placeholder="राज्य (State)">
@@ -193,8 +200,9 @@ setInterval(function(){
 
 <select id="quantity">
 <option value="">Quantity चुनें</option>
-<op value="1 Pack">1 Pack - ₹999</option>
-<option value="2 Pack">2 Pack - ₹1799 (Best Offer)</opt
+<option value="1 Pack">1 Pack - ₹999</option>
+<option value="2 Pack">2 Pack - ₹1799 (Best Offer)</option>
+</select>
 <select>
 <option selected>Cash on Delivery (COD)</option>
 </select>
@@ -213,10 +221,11 @@ setInterval(function(){
 जिम करता हूँ और स्टैमिना बढ़ाने के लिए लिया था, रिजल्ट सच में अच्छा है।</p></div>
 
 <div class="review"><span class="star">★★★★★</span>
-<p><b>राजेश मीणा (जयपुर) ✔️ Verified Buyer</एक्टिवनेसमजोरी बहुत थी, 1 हफ्ते में काफी सुधार हुआ। मैं रोज इस्तेमाल कर रहा हूँ।</p></div>
+<p><b>राजेश मीणा (जयपुर) ✔️ Verified Buyer</b><br>
+कमजोरी बहुत थी, 1 हफ्ते में काफी सुधार हुआ। मैं रोज इस्तेमाल कर रहा हूँ।</p></div>
 
 <div class="review"><span class="star">★★★★★</span>
-<p><b>विकास सिंह (लखनऊ) ✔️ थकानed Buyer</b><br>
+<p><b>विकास सिंह (लखनऊ) ✔️ Verified Buyer</b><br>
 पहले भरोसा नहीं था, लेकिन COD मिलने के बाद लिया और अब रेगुलर यूज कर रहा हूँ।</p></div>
 
 <div class="review"><span class="star">★★★★★</span>
@@ -229,7 +238,7 @@ setInterval(function(){
 
 <div class="review"><span class="star">★★★★★</span>
 <p><b>अजय कुमार (कानपुर) ✔️ Verified Buyer</b><br>
-हर्बल है इसलिए साइड इफेक्ट एनर्जी सपोर्टर नहीं, अच्छा रिजल्ट मिल रहा है।</p></div>
+हर्बल है इसलिए साइड इफेक्ट का डर नहीं, अच्छा रिजल्ट मिल रहा है।</p></div>
 
 <div class="review"><span class="star">★★★★★</span>
 <p><b>मोहन लाल (उदयपुर) ✔️ Verified Buyer</b><br>
